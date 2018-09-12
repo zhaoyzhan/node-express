@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welwwwcome to <%= title %></p>
+	<%- include('header', {name: 'dell'})%>
+	<main>main</main>
+	<footer>footer</footer>
+
+<!-- 
+	<% if(flag === true) { %>
+		<p>hello</p>
+	<% }else { %>
+		<p>world</p>
+	<%}%>
+
+
+	<%= title%>
+	<%- title%>
+	<%%= title%%>
+	<%=num%>
+
+	<% if(flag === true) { %>
+		<h1>wwww</h1>
+	<% } else { %>
+		<h1>ddd</h1>
+	<% } %> -->
+
+
+	<!-- <form action="/showUser" method="get">
+		用户名: <input type="text" name="username"></input>
+		密码: <input type="text" name="password"></input>
+		<button type="submit">提交</button>
+	</form> -->
   </body>
 </html>

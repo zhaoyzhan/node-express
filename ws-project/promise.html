@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// var p = new Promise((resolve, reject) => {
+	// 	setTimeout(() => resolve(), 2000)
+	// })
+	// .then(() => setTimeout(null, 2000), (err) => {
+	// 	console.log(err);
+	// })
+	// .then(() => setTimeout(function() {
+	// 	console.log(11)
+	// }, 2000), (err) => {
+	// 	console.log(err);
+	// });
+
+
+	//async
+	let sleep = function (time) {
+      	return new Promise(function (resolve, reject) {
+         	setTimeout(function () {
+         		console.log('222222')
+             	resolve();
+          	}, 3000);
+      	})
+  	};
+  
+  	let howLongToSleep = async function () {
+     	// 在这里使用起来就像同步代码那样直观
+     	// console.time();
+     	await setTimeout(()=>{
+     		console.log('start', '11111');
+     	},4000)
+     	
+     	await sleep(3000);  //sleep 为一个执行需要耗费 3s 的函数
+     	await console.log('end', '33333');
+ 	};
+ 
+    howLongToSleep();
+</script>
+</html>

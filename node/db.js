@@ -36,14 +36,14 @@ MongoClient.connect(url, (err, db) => {
 	var collection = dbo.collection("user");
 	//查询
 	collection.find({}).toArray((err, result) => {
-			console.log(result);
-		})
-		// console.log(collection);
-		// dbo.collection("user").insertOne(myobj, function(err, res) {
-		// 	if (err) throw err;
-		// 	console.log("文档插入成功");
-		// 	db.close();
-		// });
+		console.log(result);
+	});
+	// console.log(collection);
+	// dbo.collection("user").insertOne(myobj, function(err, res) {
+	// 	if (err) throw err;
+	// 	console.log("文档插入成功");
+	// 	db.close();
+	// });
 });
 
 //插入多条数据 insertMany

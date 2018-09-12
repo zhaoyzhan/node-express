@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
 		});
 		res.end(image, 'binary')
 	} else {
-		res.end('404');
+		res.end('40400');
 	}
 
 	// console.log(pathname, query);

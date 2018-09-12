@@ -1,0 +1,10 @@
+{
+  "name": "ws-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0",
+    "ws": "^5.1.0"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	输入聊天内容<input type="text" id="chat">
+	<button id="submit">提交</button>
+
+	<ul id="list"></ul>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		var client = new WebSocket('ws://127.0.0.1:9000');
+
+		client.onmessage = function(message) {
+			$("#list").append("<li>" + message.data + "</li>");
+		}
+		$("#submit").on("click", function() {
+			client.send($("#chat").val());
+		})
+	</script>
+</body>
+</html>
